@@ -1,0 +1,6 @@
+<data flavor="com.bunniesandbeatings.go-flavor">
+	<modules>
+		<module name="file_a.go" id="1" type="gofile"/>
+		<module name="file_b.go" id="2" type="gofile"/>
+	</modules>
+</data>
