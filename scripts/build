@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eo pipefail
+
+mkdir -p bin
+
+go get github.com/bunniesandbeatings/go-flavor-parser/...
+go build -o ./bin/parser github.com/bunniesandbeatings/go-flavor-parser/go-flavor-parser

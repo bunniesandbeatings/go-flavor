@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<runner type="app">
+    <params>
+        <param key="gopath" name="$GOPATH" type="file" mode="dirOnly" required="true">
+            <description>
+                Location of your Go directory structure
+            </description>
+        </param>
+        <param key="package-def" name="Package Definition" type="string" required="true" default="github.com/bunniesandbeatings/go-flavor-parser/...">
+            <description>
+                Package definition to analyse. For more info, run 'go help packages'
+            </description>
+        </param>
+    </params>
+    <app exe="${flavor.home}/bin/parser">
+        <arg>--gopath</arg>
+        <arg>${params.gopath}</arg>
+        <arg>--output</arg>
+        <arg>${s101g.tmpfile}</arg>
+        <arg>${params.package-def}</arg>
+    </app>
+</runner>
