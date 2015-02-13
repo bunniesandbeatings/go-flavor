@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Go-flavor by bunniesandbeatings</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/bunniesandbeatings/go-flavor">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/bunniesandbeatings/go-flavor/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/bunniesandbeatings/go-flavor/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Go-flavor</h1>
+          <p>Go Flavor for Structure 101</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/bunniesandbeatings">bunniesandbeatings</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="structure-101-golang-flavor" class="anchor" href="#structure-101-golang-flavor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structure 101 Golang flavor</h1>
+
+<p>This is a Golang flavor for the <a href="https://structure101.com/">Structure 101</a> static analysis and architectural decision making tool. </p>
+
+<p>Note: If you're wondering where the code for the runner lives, it's <a href="https://github.com/bunniesandbeatings/go-flavor-parser">here</a>.</p>
+
+<h2>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h2>
+
+<p>I used Structure 101 in the past, on Actionscript and Java projects. It was fantastic, really helped me recognize flaws in my dependency tree. Many people miss the value of a well structured, cycle-free dependency tree. For me, it's central to producing code that is easy to reason about.</p>
+
+<p>For many years, I've been primarily a Ruby developer. Unfortunately, Ruby's dynamicism does not lend itself well to static analysis, and I've aborted my attempt to produce a Ruby flavor for Structure 101.  </p>
+
+<p>I'm also developing in Go more and more, not so much by choice but because it fits the needs of products I work with. So despite my misgivings about the expressiveness of Go, I still want to have great tools for working with it. This Structure 101 flavor is one of them.</p>
+
+<h2>
+<a id="currently" class="anchor" href="#currently" aria-hidden="true"><span class="octicon octicon-link"></span></a>Currently</h2>
+
+<p>Not much here yet. A simple flavor you have to download, build the binary dependency for, and put in your struct101g folder. It only reads package level dependencies from your app at the moment. </p>
+
+<h2>
+<a id="plans" class="anchor" href="#plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plans</h2>
+
+<ol>
+<li>Runner binaries for osx, linux and windows</li>
+<li>Tests! Currently this code is a <a href="http://agiledictionary.com/209/spike/">Spike</a>. I'm a TDD guy, but with severe limitations on my time and weak Golang skills, I'm just hacking to prove value. I want to throw my code out and rewrite it with tests driving out the design.</li>
+<li>CI, probably on CircleCI.</li>
+<li>Node types:
+
+<ol>
+<li>Package (Done!)
+
+<ol>
+<li>Constant</li>
+<li>Variable</li>
+<li>Function</li>
+</ol>
+</li>
+<li>Type (struct/interface)
+
+<ol>
+<li>Public field</li>
+<li>Function</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Dependency types:
+
+<ol>
+<li>Import (Done!)</li>
+<li>Variable/Const type definition</li>
+<li>Field type Definition</li>
+<li>Parameter type definition</li>
+<li>Return type definition</li>
+<li>Function calls</li>
+<li>Casts</li>
+</ol>
+</li>
+</ol>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Currently this is only tested on OSX. It should work on any *nix with a bash shell.</p>
+
+<ol>
+<li>Install go and make sure your GOPATH is set up</li>
+<li>
+<p>Download and build</p>
+
+<div class="highlight highlight-shell"><pre>git clone https://github.com/bunniesandbeatings/go-flavor
+<span class="pl-s3">cd</span> go-flavor
+./scripts/build</pre></div>
+</li>
+<li>
+<p>Symlink into Struct101g (if you cant find the struct101g folder, run struct101g first and install one of the other flavors)</p>
+
+<div class="highlight highlight-shell"><pre>ln -s <span class="pl-s1"><span class="pl-pds">`</span><span class="pl-s3">pwd</span><span class="pl-pds">`</span></span> <span class="pl-vo">$HOME</span>/structure101g/flavors/com.bunniesandbeatings.go-flavor_0.0.1</pre></div>
+</li>
+<li><p>You must restart Structure 101g, it should have a new Project type under 'New Project' for the Go flavor.</p></li>
+</ol>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>In Structure 101g, create a new project</li>
+<li>Select the "com.bunniesandbeatings.go-flavor" project type</li>
+<li>click Next</li>
+<li>For '$GOPATH', enter your gopath. Unfortunately Structure 101g doesn't run the flavor's runner using your shell environment.</li>
+<li>For 'Package Definition', use a package ref as described by <code>go help packages</code>
+
+<ol>
+<li>For example <code>github.com/bunniesandbeatings/go-flavor-parser/...</code>
+</li>
+</ol>
+</li>
+</ol>
+
+<h1>
+<a id="project-backlog" class="anchor" href="#project-backlog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project backlog</h1>
+
+<p>Maintained on the <a href="https://www.pivotaltracker.com/n/projects/1265846">go-flavor Pivotal Tracker project</a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
