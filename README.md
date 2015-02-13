@@ -66,3 +66,8 @@ Currently this is only tested on OSX. It should work on any *nix with a bash she
 0. For '$GOPATH', enter your gopath. Unfortunately Structure 101g doesn't run the flavor's runner using your shell environment.
 0. For 'Package Definition', use a package ref as described by ```go help packages```
   0. For example ```github.com/bunniesandbeatings/go-flavor-parser/...```
+
+
+# Project backlog
+
+Maintained on the [go-flavor Pivotal Tracker project](https://www.pivotaltracker.com/n/projects/1265846)
