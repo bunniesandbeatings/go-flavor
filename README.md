@@ -20,6 +20,7 @@ Not much here yet. A simple flavor you have to download, build the binary depend
 
   0. Runner binaries for osx, linux and windows
   0. Tests! Currently this code is a [Spike](http://agiledictionary.com/209/spike/). I'm a TDD guy, but with severe limitations on my time and weak Golang skills, I'm just hacking to prove value. I want to throw my code out and rewrite it with tests driving out the design.
+  0. CI, probably on CircleCI.
   0. Node types:
     0. Package (Done!)
       0. Constant
