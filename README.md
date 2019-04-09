@@ -1,3 +1,5 @@
+**Out of date** This project is old and needs reviewing. We never completed it, and hopefully some of the tooling we need has already been developed elsewhere. Keeping this for historical reasons, and because I do plan on returning to this work.
+
 # Structure 101g Golang flavor
 
 This is a Golang flavor for the [Structure 101g](https://structure101.com/) static analysis and architectural decision making tool. 
