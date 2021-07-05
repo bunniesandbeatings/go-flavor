@@ -4,7 +4,7 @@
 
 This is a Golang flavor for the [Structure 101g](https://structure101.com/) static analysis and architectural decision making tool. 
 
-Note: If you're wondering where the code for the runner lives, it's [here](https://github.com/bunniesandbeatings/go-flavor-parser).
+Note: If you're wondering where the code for the runner lives, it's [here](https://github.com/bunniesandbeatings/baduk).
 
 ## Why?
 
